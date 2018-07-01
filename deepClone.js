@@ -1,4 +1,4 @@
-let obj = {
+  let obj = {
     ase: {
         aer: 2
     },
