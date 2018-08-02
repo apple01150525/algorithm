@@ -1,21 +1,16 @@
 // leetcode 27 移除元素
 var removeElement = function(nums, val) {
-    let cnt = 0;
-    for (let i = 0; i < nums.length; i++) {
-        console.log(nums);
-        if (i + cnt == nums.length - 1) {
-            nums.length = nums.length - cnt - 1;
-            return nums;
-        }
-
+    let n = nums.length,
+        i = 0;
+    while (i < n) {
         if (nums[i] == val) {
-            cnt++;
+            n--;
+            nums[i] = nums[n];
+        } else {
+            i++;
         }
-        console.log("==========   " + cnt);
-        nums[i] = nums[i + cnt];
-
     }
-    return nums;
+    return n;
 };
 
 const arr = [3, 2, 2, 3, 1],
