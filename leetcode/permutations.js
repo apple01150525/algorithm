@@ -1,6 +1,7 @@
 // leetcode 46 全排列
 
 var permute = function(str) {
+        console.log(str);
         var result = [];
         if(str.length > 1) {
             var left = str[0];
@@ -21,4 +22,5 @@ var permute = function(str) {
      
         return result;
 };
+console.log(1111111111);
 console.log(permute([1,2,3,4]));
