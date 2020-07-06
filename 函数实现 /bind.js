@@ -1,9 +1,10 @@
 //简易版
-Function.prototype.bind = function() {
-	var target = this;
-	var bindArgs = Array.prototype.slice.call(arguments, 1);
-	return function() {
-		var callArgs = Array.prototype.slice.call(arguments);
-		return target.apply(that, bindArgs.concat(callArgs));
-	}
-}
+Function.prototype.bind = function(context){
+	var args = Array.prototype.slice.call(arguments, 1),
+	self = this;
+	return function(){
+		var innerArgs = Array.prototype.slice.call(arguments);
+		var finalArgs = args.concat(innerArgs);
+		return self.apply(context,finalArgs);
+	};
+  };
