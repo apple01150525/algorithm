@@ -31,6 +31,11 @@ Function.prototype._bind  = function (context) {
 
 }
 
+function bind2(context, ...outerArgs) {
+	// 剪头函数没有自己的this
+	return (...args) => this.call(context, ...outerArgs, ...args); 
+}
+
 
 const fnbind = fn._bind(obj);
 

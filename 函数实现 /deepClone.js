@@ -67,3 +67,11 @@ let asd1 = deepClone2(obj);
 asd1.er = 3;
 console.log('asd1', asd1);
 console.log(obj);
+
+let alal = {
+    a: 1,
+    b: ()=> {},
+    c: {
+        d: [1,2]
+    }
+};
