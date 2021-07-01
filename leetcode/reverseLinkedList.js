@@ -6,8 +6,8 @@ function ListNode(val) {
 }
 
 var reverseList = function(head) {
-    var pre = new ListNode(null);
-    while (head.next) {
+    var pre = null;
+    while (head) {
         next = head.next
         head.next = pre
         pre = head
